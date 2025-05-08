@@ -7,8 +7,8 @@ import {
   rollupAdminLogicPublicActions,
   // Uncomment it when you want to use getValidators() to get validator status
   // getValidators,
-} from '@arbitrum/orbit-sdk';
-import { sanitizePrivateKey } from '@arbitrum/orbit-sdk/utils';
+} from '@eigenda/orbit-sdk';
+import { sanitizePrivateKey } from '@eigenda/orbit-sdk/utils';
 import { config } from 'dotenv';
 config();
 
