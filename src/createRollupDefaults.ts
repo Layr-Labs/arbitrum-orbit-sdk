@@ -6,4 +6,6 @@ export const defaults = {
   maxFeePerGasForRetryables: parseGwei(String('0.1')),
   batchPosterManager: zeroAddress,
   feeTokenPricer: zeroAddress,
+  // Zero address leads to a dummy manager being created in the constructor
+  eigenDACertVerifier: zeroAddress,
 };

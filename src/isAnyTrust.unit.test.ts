@@ -30,7 +30,9 @@ it('should return true for AnyTrust chain (RollupCreator v2.1)', async () => {
   expect(isAnyTrustChain).toBeTruthy();
 });
 
-it('should return true for AnyTrust chain (RollupCreator v3.1)', async () => {
+// TODO: Re-enable this test once there is a rollup deployment made using the eigenDA structs.
+// The test must be updated with the correct transaction hash for a rollup created with eigenDA v3.1
+it.skip('should return true for AnyTrust chain (RollupCreator v3.1)', async () => {
   const client = createPublicClient({
     chain: sepolia,
     transport: http('https://sepolia.gateway.tenderly.co'),
@@ -69,7 +71,9 @@ it('should return false for non AnyTrust chain (RollupCreator v2.1)', async () =
   expect(isAnyTrustChain).toBeFalsy();
 });
 
-it('should return false for non AnyTrust chain (RollupCreator v3.1)', async () => {
+// TODO: Re-enable this test once there is a rollup deployment made using the eigenDA structs.
+// The test must be updated with the correct transaction hash for a rollup created with eigenDA v3.1
+it.skip('should return false for non AnyTrust chain (RollupCreator v3.1)', async () => {
   const client = createPublicClient({
     chain: sepolia,
     transport: http('https://sepolia.gateway.tenderly.co'),

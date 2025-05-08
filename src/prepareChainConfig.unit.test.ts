@@ -21,7 +21,8 @@ it('creates chain config with custom params', () => {
     chainId,
     arbitrum: {
       InitialChainOwner: vitalik,
-      InitialArbOSVersion: 20,
+      InitialArbOSVersion: 32,
+      EigenDA: true,
       DataAvailabilityCommittee: true,
       MaxCodeSize: 40 * 1024,
       MaxInitCodeSize: 80 * 1024,

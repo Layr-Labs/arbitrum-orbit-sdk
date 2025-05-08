@@ -11,6 +11,8 @@
  * - [__View Contract on Base Sepolia Blockscout__](https://base-sepolia.blockscout.com/address/0x70cA29dA3B116A2c4A267c549bf7947d47f41e22)
  * - [__View Contract on Arbitrum Sepolia Blockscout__](https://sepolia-explorer.arbitrum.io/address/0x5F45675AC8DDF7d45713b2c7D191B287475C16cF)
  * - [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x687Bc1D23390875a868Db158DA1cDC8998E31640)
+ *
+ * TODO: These contract addresses need to be updated once the eigenDA v3.1 contracts are deployed.
  */
 export const rollupCreatorABI = [
   { stateMutability: 'nonpayable', type: 'constructor', inputs: [] },
@@ -137,11 +139,26 @@ export const rollupCreatorABI = [
           { name: 'batchPosters', internalType: 'address[]', type: 'address[]' },
           { name: 'batchPosterManager', internalType: 'address', type: 'address' },
           { name: 'feeTokenPricer', internalType: 'contract IFeeTokenPricer', type: 'address' },
+          { name: 'eigenDACertVerifier', internalType: 'address', type: 'address' },
         ],
       },
     ],
     name: 'createRollup',
     outputs: [{ name: '', internalType: 'address', type: 'address' }],
+  },
+  {
+    stateMutability: 'view',
+    type: 'function',
+    inputs: [],
+    name: 'deploymentFrozen',
+    outputs: [{ name: '', internalType: 'bool', type: 'bool' }],
+  },
+  {
+    stateMutability: 'nonpayable',
+    type: 'function',
+    inputs: [],
+    name: 'freezeDeployment',
+    outputs: [],
   },
   {
     stateMutability: 'view',
@@ -206,6 +223,13 @@ export const rollupCreatorABI = [
     outputs: [],
   },
   {
+    stateMutability: 'view',
+    type: 'function',
+    inputs: [],
+    name: 'templatesSet',
+    outputs: [{ name: '', internalType: 'bool', type: 'bool' }],
+  },
+  {
     stateMutability: 'nonpayable',
     type: 'function',
     inputs: [{ name: 'newOwner', internalType: 'address', type: 'address' }],
@@ -238,17 +262,25 @@ export const rollupCreatorABI = [
  * - [__View Contract on Base Sepolia Blockscout__](https://base-sepolia.blockscout.com/address/0x70cA29dA3B116A2c4A267c549bf7947d47f41e22)
  * - [__View Contract on Arbitrum Sepolia Blockscout__](https://sepolia-explorer.arbitrum.io/address/0x5F45675AC8DDF7d45713b2c7D191B287475C16cF)
  * - [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x687Bc1D23390875a868Db158DA1cDC8998E31640)
+ *
+ * TODO: These contract addresses need to be updated once the eigenDA v3.1 contracts are deployed.
  */
+
+const zeroAddress = '0x0000000000000000000000000000000000000000';
+
 export const rollupCreatorAddress = {
-  1: '0x43698080f40dB54DEE6871540037b8AB8fD0AB44',
-  1337: '0xb562622f2D76F355D673560CB88c1dF6088702f1',
-  8453: '0xDbe3e840569a0446CDfEbc65D7d429c5Da5537b7',
-  42161: '0xB90e53fd945Cd28Ec4728cBfB566981dD571eB8b',
-  42170: '0xF916Bfe431B7A7AaE083273F5b862e00a15d60F4',
-  84532: '0x70cA29dA3B116A2c4A267c549bf7947d47f41e22',
-  412346: '0x1E08B9c3f94E9aBcc531f67F949d796eC76963b9',
-  421614: '0x5F45675AC8DDF7d45713b2c7D191B287475C16cF',
-  11155111: '0x687Bc1D23390875a868Db158DA1cDC8998E31640',
+  // Not super elegant since the SDK could attempt to trigger a deployment using the zero address vs failing loudly
+  1337: zeroAddress,
+  42170: zeroAddress,
+  412346: zeroAddress,
+
+  // TODO: These addresses need to be updated with actual eigenDA v3.1 contract addresses once deployed
+  1: '0x43698080f40dB54DEE6871540037b8AB8fD0AB44', // eth mainnet
+  8453: '0xDbe3e840569a0446CDfEbc65D7d429c5Da5537b7', // base mainnet
+  42161: '0xB90e53fd945Cd28Ec4728cBfB566981dD571eB8b', // arbOne
+  84532: '0x70cA29dA3B116A2c4A267c549bf7947d47f41e22', // base sepolia
+  421614: '0x5F45675AC8DDF7d45713b2c7D191B287475C16cF', // arb sepolia
+  11155111: '0x687Bc1D23390875a868Db158DA1cDC8998E31640', // sepolia
 } as const;
 
 /**
@@ -260,6 +292,8 @@ export const rollupCreatorAddress = {
  * - [__View Contract on Base Sepolia Blockscout__](https://base-sepolia.blockscout.com/address/0x70cA29dA3B116A2c4A267c549bf7947d47f41e22)
  * - [__View Contract on Arbitrum Sepolia Blockscout__](https://sepolia-explorer.arbitrum.io/address/0x5F45675AC8DDF7d45713b2c7D191B287475C16cF)
  * - [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x687Bc1D23390875a868Db158DA1cDC8998E31640)
+ *
+ * TODO: These contract addresses need to be updated once the eigenDA v3.1 contracts are deployed.
  */
 export const rollupCreatorConfig = {
   address: rollupCreatorAddress,

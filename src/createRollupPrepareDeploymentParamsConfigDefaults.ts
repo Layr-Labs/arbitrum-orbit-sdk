@@ -1,7 +1,10 @@
 import { zeroAddress, zeroHash } from 'viem';
 
-import { getConsensusReleaseByVersion } from './wasmModuleRoot';
 import { CreateRollupPrepareDeploymentParamsConfigResult as Config } from './createRollupPrepareDeploymentParamsConfig';
+
+// https://github.com/Layr-Labs/nitro/releases/tag/consensus-eigenda-v32.1
+export const wasmModuleRoot: `0x${string}` =
+  '0x04a297cdd13254c4c6c26388915d416286daf22f3a20e3ebee10400a3129dd17';
 
 const bufferConfig: Config['bufferConfig'] = {
   threshold: BigInt(2 ** 32),
@@ -27,5 +30,5 @@ export const defaults = {
   layerZeroBigStepEdgeHeight: BigInt(2 ** 19),
   layerZeroSmallStepEdgeHeight: BigInt(2 ** 23),
   numBigStepLevel: 1,
-  wasmModuleRoot: getConsensusReleaseByVersion(32).wasmModuleRoot,
+  wasmModuleRoot: wasmModuleRoot,
 } as const;

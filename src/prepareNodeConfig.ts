@@ -35,6 +35,7 @@ export type PrepareNodeConfigParams = {
   parentChainIsArbitrum?: boolean;
   parentChainRpcUrl: string;
   parentChainBeaconRpcUrl?: string;
+  eigendaRpcUrl?: string;
   dasServerUrl?: string;
 };
 
@@ -57,6 +58,7 @@ export function prepareNodeConfig({
   parentChainIsArbitrum: parentChainIsArbitrumParam,
   parentChainRpcUrl,
   parentChainBeaconRpcUrl,
+  eigendaRpcUrl,
   dasServerUrl,
 }: PrepareNodeConfigParams): NodeConfig {
   // For L2 Orbit chains settling to Ethereum mainnet or testnet, a parentChainBeaconRpcUrl is enforced
@@ -111,6 +113,10 @@ export function prepareNodeConfig({
       api: ['eth', 'net', 'web3', 'arb', 'debug'],
     },
     'node': {
+      'eigen-da': {
+        enable: true,
+        rpc: eigendaRpcUrl,
+      },
       'sequencer': true,
       'delayed-sequencer': {
         'enable': true,

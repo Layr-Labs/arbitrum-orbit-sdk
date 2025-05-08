@@ -4,6 +4,7 @@ export type ChainConfigArbitrumParams = {
   EnableArbOS: boolean;
   AllowDebugPrecompiles: boolean;
   InitialArbOSVersion: number;
+  EigenDA: boolean;
   InitialChainOwner: Address;
   DataAvailabilityCommittee: boolean;
   GenesisBlockNum: number;
