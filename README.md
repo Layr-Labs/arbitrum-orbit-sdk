@@ -12,10 +12,10 @@ yarn add @eigenda/orbit-sdk viem@^1.20.0
 
 ## Run integration tests
 
-Clone the branch `main` of [nitro-testnode](https://github.com/Layr-Labs/nitro-testnode), and run the testnode using the following arguments:
+Clone the branch `main` of [nitro-testnode](https://github.com/Layr-Labs/nitro-testnode), and run the testnode using the following arguments to use eigenda:
 
 ```bash
-./test-node.bash --init --tokenbridge --l3node --l3-fee-token --l3-token-bridge
+./test-node.bash --init --tokenbridge --l3node --l3-fee-token --l3-token-bridge --eigenda
 ```
 
 Then, run the integration tests:
