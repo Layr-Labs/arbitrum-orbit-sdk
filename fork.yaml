@@ -5,7 +5,7 @@ footer: |  # define the footer with markdown
 base:
   name: OffchainLabs/orbit-sdk
   url: https://github.com/OffchainLabs/arbitrum-orbit-sdk
-  hash: 8522dd838fe624422d20d9d2f085d8a29a1f5c4d
+  hash: 55e16cc4284a39c8ed7e556f3b9bb21ba2410063
 fork:
   name: Layr-Labs/eigenda-orbit-sdk
   url: https://github.com/Layr-Labs/eigenda-orbit-sdk
