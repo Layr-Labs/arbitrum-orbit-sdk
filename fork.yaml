@@ -4,7 +4,7 @@ footer: |  # define the footer with markdown
   [orbit-sdk](https://github.com/Layr-Labs/orbit-sdk) fork overview &middot created with [Forkdiff](https://github.com/protolambda/forkdiff)
 base:
   name: OffchainLabs/orbit-sdk
-  url: https://github.com/OffchainLabs/orbit-sdk
+  url: https://github.com/OffchainLabs/arbitrum-orbit-sdk
   hash: 8522dd838fe624422d20d9d2f085d8a29a1f5c4d
 fork:
   name: Layr-Labs/eigenda-orbit-sdk
