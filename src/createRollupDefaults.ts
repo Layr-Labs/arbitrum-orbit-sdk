@@ -6,6 +6,7 @@ export const defaults = {
   maxFeePerGasForRetryables: parseGwei(String('0.1')),
   batchPosterManager: zeroAddress,
   feeTokenPricer: zeroAddress,
-  // Zero address leads to a dummy manager being created in the constructor
+  // Zero address leads to no cert verifier address being inserted into sequencer inbox storage, so verification will
+  // be a noop
   eigenDACertVerifier: zeroAddress,
 };
